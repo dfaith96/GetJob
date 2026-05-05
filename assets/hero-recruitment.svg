@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Recruitment team reviewing ranked candidates</title>
+  <desc id="desc">A stylized office scene with candidate cards, rankings, and an AI matching panel.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8faf6"/>
+      <stop offset="1" stop-color="#dceee6"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#172033"/>
+      <stop offset="1" stop-color="#0b514e"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#172033" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="0" fill="url(#wall)"/>
+  <rect x="80" y="80" width="1040" height="600" rx="24" fill="#ffffff" opacity="0.74"/>
+  <rect x="132" y="126" width="606" height="390" rx="18" fill="url(#screen)" filter="url(#softShadow)"/>
+  <rect x="164" y="160" width="180" height="18" rx="9" fill="#d4a017"/>
+  <rect x="164" y="205" width="512" height="74" rx="12" fill="#ffffff" opacity="0.11"/>
+  <rect x="184" y="225" width="48" height="34" rx="8" fill="#f1b859"/>
+  <rect x="252" y="224" width="170" height="12" rx="6" fill="#ffffff" opacity="0.84"/>
+  <rect x="252" y="246" width="300" height="10" rx="5" fill="#ffffff" opacity="0.42"/>
+  <rect x="594" y="222" width="58" height="28" rx="14" fill="#23a56f"/>
+  <rect x="164" y="300" width="512" height="74" rx="12" fill="#ffffff" opacity="0.11"/>
+  <rect x="184" y="320" width="48" height="34" rx="8" fill="#d9e7dc"/>
+  <rect x="252" y="319" width="156" height="12" rx="6" fill="#ffffff" opacity="0.84"/>
+  <rect x="252" y="341" width="274" height="10" rx="5" fill="#ffffff" opacity="0.42"/>
+  <rect x="594" y="317" width="58" height="28" rx="14" fill="#f1b859"/>
+  <rect x="164" y="395" width="512" height="74" rx="12" fill="#ffffff" opacity="0.11"/>
+  <rect x="184" y="415" width="48" height="34" rx="8" fill="#c95f45"/>
+  <rect x="252" y="414" width="132" height="12" rx="6" fill="#ffffff" opacity="0.84"/>
+  <rect x="252" y="436" width="248" height="10" rx="5" fill="#ffffff" opacity="0.42"/>
+  <rect x="594" y="412" width="58" height="28" rx="14" fill="#c95f45"/>
+  <g filter="url(#softShadow)">
+    <rect x="760" y="150" width="282" height="308" rx="18" fill="#ffffff"/>
+    <rect x="790" y="184" width="112" height="12" rx="6" fill="#172033"/>
+    <rect x="790" y="214" width="212" height="10" rx="5" fill="#b8c5cc"/>
+    <circle cx="838" cy="288" r="46" fill="#f1b859"/>
+    <path d="M790 392c16-46 80-66 132-40 22 11 39 25 50 40v36H790z" fill="#0f766e"/>
+    <rect x="910" y="264" width="80" height="12" rx="6" fill="#dce2e7"/>
+    <rect x="910" y="292" width="58" height="12" rx="6" fill="#dce2e7"/>
+    <rect x="910" y="320" width="92" height="12" rx="6" fill="#dce2e7"/>
+    <rect x="790" y="486" width="224" height="22" rx="11" fill="#0f766e" opacity="0.14"/>
+    <rect x="790" y="524" width="160" height="22" rx="11" fill="#c95f45" opacity="0.14"/>
+  </g>
+  <g>
+    <ellipse cx="392" cy="630" rx="270" ry="34" fill="#172033" opacity="0.1"/>
+    <circle cx="292" cy="552" r="44" fill="#8a5a44"/>
+    <path d="M228 686c8-74 36-110 88-110s82 36 92 110z" fill="#c95f45"/>
+    <rect x="248" y="598" width="90" height="116" rx="24" fill="#f7d1b8"/>
+    <circle cx="510" cy="536" r="44" fill="#4a332a"/>
+    <path d="M436 686c12-80 44-120 96-120s82 40 96 120z" fill="#0f766e"/>
+    <rect x="476" y="582" width="86" height="126" rx="24" fill="#d59c78"/>
+    <rect x="344" y="576" width="120" height="82" rx="10" fill="#ffffff" stroke="#dce2e7" stroke-width="4"/>
+    <rect x="370" y="602" width="66" height="10" rx="5" fill="#0b514e"/>
+    <rect x="370" y="624" width="44" height="10" rx="5" fill="#d4a017"/>
+  </g>
+</svg>

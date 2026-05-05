@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GetJob | AI Recruitment Agency</title>
+    <meta
+      name="description"
+      content="GetJob screens CVs, extracts skills and experience, ranks candidates against job requirements, and gives HR teams a ready shortlist."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="GetJob home">
+        <span class="brand-mark">GJ</span>
+        <span>GetJob</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#screening">AI Screener</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#trust">Trust</a>
+      </nav>
+      <a class="header-action" href="#contact">Book demo</a>
+    </header>
+
+    <main id="top">
+      <section class="hero-shell" id="screening">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Recruitment Agency</p>
+          <h1>Screen, rank, and shortlist candidates in minutes.</h1>
+          <p class="lead">
+            GetJob turns job requirements and CVs into structured skills,
+            experience signals, match scores, and a recruiter-ready shortlist.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-load-sample>
+              Load sample CVs
+            </button>
+            <a class="secondary-button" href="#services">Explore services</a>
+          </div>
+          <div class="metrics-strip" aria-label="Product highlights">
+            <span><strong>200+</strong> CVs ranked</span>
+            <span><strong>90 sec</strong> shortlist view</span>
+            <span><strong>Human</strong> final decision</span>
+          </div>
+        </div>
+
+        <div class="screening-board" aria-label="AI screening workspace">
+          <div class="board-toolbar">
+            <span class="status-dot"></span>
+            <span>Live candidate matching</span>
+            <span class="toolbar-pill">Demo</span>
+          </div>
+          <form class="screening-form" id="screeningForm">
+            <label>
+              Role title
+              <input
+                id="roleTitle"
+                type="text"
+                value="Senior Data Analyst"
+                autocomplete="off"
+              />
+            </label>
+            <label>
+              Must-have skills
+              <input
+                id="mustHave"
+                type="text"
+                value="SQL, Python, Power BI, stakeholder reporting"
+                autocomplete="off"
+              />
+            </label>
+            <label class="wide-field">
+              Job requirements
+              <textarea id="jobRequirements" rows="7">We need a Senior Data Analyst with 4+ years of experience using SQL, Python, Power BI, dashboard design, stakeholder reporting, and business analytics. Experience with hiring funnels, HR operations, or workforce data is a strong advantage. The person should communicate insights clearly, work with cross-functional teams, and translate business questions into measurable analysis.</textarea>
+            </label>
+            <div class="form-actions">
+              <button class="primary-button" type="submit">Screen candidates</button>
+              <button class="ghost-button" type="button" data-clear-candidates>
+                Clear CVs
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="results-section" aria-labelledby="rankedTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Ranked Shortlist</p>
+          <h2 id="rankedTitle">Best-fit candidates appear first.</h2>
+          <p>
+            The scoring model weighs required skills, role keywords,
+            seniority, experience depth, and missing criteria.
+          </p>
+        </div>
+        <div class="results-layout">
+          <div class="shortlist-panel">
+            <div class="panel-header">
+              <span>Candidate ranking</span>
+              <strong id="candidateCount">0 CVs</strong>
+            </div>
+            <div id="candidateResults" class="candidate-results"></div>
+          </div>
+          <aside class="cv-intake" aria-label="Add candidate CV">
+            <img
+              src="assets/hero-recruitment.svg"
+              alt="Recruitment team reviewing ranked candidates"
+              class="intake-image"
+            />
+            <h3>Add a candidate CV</h3>
+            <label>
+              Candidate name
+              <input id="candidateName" type="text" placeholder="Example: Ada Johnson" />
+            </label>
+            <label>
+              Current role
+              <input id="candidateRole" type="text" placeholder="Example: Data Analyst" />
+            </label>
+            <label>
+              CV text
+              <textarea
+                id="candidateCv"
+                rows="8"
+                placeholder="Paste CV text here. Include skills, years of experience, tools, achievements, and industries."
+              ></textarea>
+            </label>
+            <button class="secondary-button full-width" type="button" data-add-cv>
+              Add CV to screening
+            </button>
+            <label class="file-drop">
+              <span>Import .txt or .md CV files</span>
+              <input id="cvFiles" type="file" accept=".txt,.md" multiple />
+            </label>
+          </aside>
+        </div>
+      </section>
+
+      <section class="visual-band" id="workflow">
+        <div class="visual-copy">
+          <p class="eyebrow">How GetJob Works</p>
+          <h2>From job description to confident shortlist.</h2>
+          <p>
+            Recruiters define the role once. GetJob extracts candidate
+            evidence from CVs, compares it with the requirement profile, then
+            presents the most suitable people with clear reasoning.
+          </p>
+        </div>
+        <img
+          src="assets/product-dashboard.svg"
+          alt="GetJob product dashboard showing candidate scores and skill matches"
+          class="dashboard-image"
+        />
+      </section>
+
+      <section class="step-grid" aria-label="GetJob workflow stages">
+        <article>
+          <span class="step-number">01</span>
+          <h3>Describe the role</h3>
+          <p>
+            Add the job title, must-have skills, seniority, target experience,
+            and business context.
+          </p>
+        </article>
+        <article>
+          <span class="step-number">02</span>
+          <h3>Analyse CVs</h3>
+          <p>
+            Extract tools, industry exposure, years of experience, education,
+            and achievements from candidate profiles.
+          </p>
+        </article>
+        <article>
+          <span class="step-number">03</span>
+          <h3>Rank by fit</h3>
+          <p>
+            Score candidates against hard requirements and highlight strengths,
+            gaps, and interview focus areas.
+          </p>
+        </article>
+        <article>
+          <span class="step-number">04</span>
+          <h3>Shortlist faster</h3>
+          <p>
+            Move the strongest candidates forward with a transparent summary
+            that hiring managers can review quickly.
+          </p>
+        </article>
+      </section>
+
+      <section class="services-section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Agency Services</p>
+          <h2>AI speed with recruiter judgment.</h2>
+          <p>
+            GetJob supports hiring teams that need more signal from every CV
+            without adding manual review hours.
+          </p>
+        </div>
+        <div class="service-grid">
+          <article>
+            <h3>Role intelligence</h3>
+            <p>
+              Convert job descriptions into a weighted hiring scorecard with
+              required skills, nice-to-haves, and screening criteria.
+            </p>
+          </article>
+          <article>
+            <h3>CV screening</h3>
+            <p>
+              Parse candidate profiles and organize skills, years of
+              experience, domains, tools, and career progression.
+            </p>
+          </article>
+          <article>
+            <h3>Candidate ranking</h3>
+            <p>
+              Rank applicants by role fit, flag missing requirements, and show
+              the evidence behind every score.
+            </p>
+          </article>
+          <article>
+            <h3>Shortlist reports</h3>
+            <p>
+              Deliver manager-ready shortlists with interview prompts,
+              screening notes, and comparison summaries.
+            </p>
+          </article>
+          <article>
+            <h3>Pipeline support</h3>
+            <p>
+              Track candidate movement from applied to reviewed, shortlisted,
+              interview, offer, and hired.
+            </p>
+          </article>
+          <article>
+            <h3>Hiring analytics</h3>
+            <p>
+              See sourcing quality, skill coverage, time saved, and shortlist
+              conversion by role and department.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="trust-section" id="trust">
+        <img
+          src="assets/compliance-visual.svg"
+          alt="Responsible AI hiring controls illustration"
+          class="trust-image"
+        />
+        <div>
+          <p class="eyebrow">Responsible AI</p>
+          <h2>Transparent screening that keeps people in control.</h2>
+          <div class="trust-list">
+            <p><strong>Explainable scores.</strong> Every ranking includes matched skills, missing requirements, and evidence notes.</p>
+            <p><strong>Bias-aware process.</strong> Recruiters review recommendations and can adjust scorecards before decisions are made.</p>
+            <p><strong>Data controls.</strong> Candidate data policies, retention windows, and access permissions can be configured for each hiring team.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section" id="team">
+        <div class="section-heading">
+          <p class="eyebrow">Final Decision Team</p>
+          <h2>AI ranks candidates. People make the final call.</h2>
+          <p>
+            GetJob combines automated screening with a senior review team that
+            validates evidence, checks fit, and approves every shortlist before
+            it reaches the hiring manager.
+          </p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="member-photo member-one" aria-hidden="true">AO</div>
+            <div>
+              <h3>Adaora Okeke</h3>
+              <p class="member-role">Head of Talent Decisions</p>
+              <p>
+                Owns final shortlist approval, hiring manager calibration, and
+                role-fit recommendations for senior and specialist roles.
+              </p>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="member-photo member-two" aria-hidden="true">MT</div>
+            <div>
+              <h3>Michael Thompson</h3>
+              <p class="member-role">People Operations Lead</p>
+              <p>
+                Reviews experience depth, compensation fit, candidate readiness,
+                and interview process quality before final recommendations.
+              </p>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="member-photo member-three" aria-hidden="true">NB</div>
+            <div>
+              <h3>Nadia Bello</h3>
+              <p class="member-role">AI Screening Analyst</p>
+              <p>
+                Audits AI match scores, verifies extracted skills, flags missing
+                evidence, and prepares interview focus notes for recruiters.
+              </p>
+            </div>
+          </article>
+          <article class="team-card">
+            <div class="member-photo member-four" aria-hidden="true">DE</div>
+            <div>
+              <h3>David Evans</h3>
+              <p class="member-role">Client Hiring Partner</p>
+              <p>
+                Aligns shortlist decisions with each client's business goals,
+                culture signals, timeline, and final hiring criteria.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Get Started</p>
+          <h2>Build a sharper hiring process with GetJob.</h2>
+          <p>
+            Share your hiring need and the GetJob team will respond with the
+            best screening workflow for your role, volume, and timeline.
+          </p>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="contact-form-grid">
+            <label>
+              Full name
+              <input id="contactName" name="name" type="text" placeholder="Your name" required />
+            </label>
+            <label>
+              Work email
+              <input id="contactEmail" name="email" type="email" placeholder="you@company.com" required />
+            </label>
+            <label>
+              Company
+              <input id="contactCompany" name="company" type="text" placeholder="Company name" required />
+            </label>
+            <label>
+              Hiring volume
+              <select id="contactVolume" name="volume" required>
+                <option value="">Select volume</option>
+                <option>1-3 roles this month</option>
+                <option>4-10 roles this month</option>
+                <option>10+ roles this month</option>
+                <option>Ongoing recruitment support</option>
+              </select>
+            </label>
+            <label class="wide-field">
+              What role do you need help filling?
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="5"
+                placeholder="Tell us the role title, required skills, seniority, and when you need a shortlist."
+                required
+              ></textarea>
+            </label>
+          </div>
+          <div class="contact-actions">
+            <button class="primary-button" type="submit">Send enquiry</button>
+            <p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <span>GetJob AI Recruitment Agency</span>
+        <span>CV screening. Candidate ranking. Shortlist intelligence.</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
