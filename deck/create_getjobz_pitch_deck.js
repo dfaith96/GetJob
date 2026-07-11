@@ -4,15 +4,15 @@ const path = require("path");
 const pptxgen = require(path.join(process.env.APPDATA, "npm", "node_modules", "pptxgenjs"));
 
 const root = path.resolve(__dirname, "..");
-const primaryOutPath = path.join(__dirname, "GetJob_Pitch_Deck.pptx");
-const fallbackOutPath = path.join(__dirname, "GetJob_Pitch_Deck_Updated.pptx");
+const primaryOutPath = path.join(__dirname, "Getjobz_Pitch_Deck.pptx");
+const fallbackOutPath = path.join(__dirname, "Getjobz_Pitch_Deck_Updated.pptx");
 
 const pptx = new pptxgen();
 pptx.layout = "LAYOUT_WIDE";
-pptx.author = "GetJob";
-pptx.company = "GetJob";
-pptx.subject = "GetJob AI Recruitment Agency pitch deck";
-pptx.title = "GetJob Pitch Deck";
+pptx.author = "Getjobz";
+pptx.company = "Getjobz";
+pptx.subject = "Getjobz AI Recruitment Agency pitch deck";
+pptx.title = "Getjobz Pitch Deck";
 pptx.lang = "en-US";
 pptx.theme = {
   headFontFace: "Aptos Display",
@@ -72,7 +72,7 @@ function addLogo(slide, dark = false) {
     color: dark ? C.tealDark : C.panel,
     margin: 0
   });
-  slide.addText("GetJob", {
+  slide.addText("Getjobz", {
     x: 1.15,
     y: 0.5,
     w: 1.2,
@@ -86,7 +86,7 @@ function addLogo(slide, dark = false) {
 }
 
 function addFooter(slide, number, dark = false) {
-  slide.addText(`GetJob AI Recruitment Agency / ${String(number).padStart(2, "0")}`, {
+  slide.addText(`Getjobz AI Recruitment Agency / ${String(number).padStart(2, "0")}`, {
     x: 0.62,
     y: 7.1,
     w: 4.2,
@@ -293,7 +293,7 @@ function slide1() {
   addTitle(
     slide,
     "Pitch deck",
-    "GetJob: AI recruitment agency for faster, higher-quality shortlists.",
+    "Getjobz: AI recruitment agency for faster, higher-quality shortlists.",
     "We screen CVs, extract candidate evidence, rank applicants against job requirements, and help HR teams move the right people forward.",
     true
   );
@@ -358,7 +358,7 @@ function slide3() {
   const slide = pptx.addSlide();
   addBackground(slide);
   addLogo(slide);
-  addTitle(slide, "Solution", "GetJob automates the first screening pass.", "The platform creates a structured hiring scorecard, analyses CVs, ranks candidates, and produces shortlist notes recruiters can defend.");
+  addTitle(slide, "Solution", "Getjobz automates the first screening pass.", "The platform creates a structured hiring scorecard, analyses CVs, ranks candidates, and produces shortlist notes recruiters can defend.");
   card(slide, 6.6, 1.15, 2.85, 1.55, "1. Job profile", "Capture must-have skills, seniority, experience level, and role context.", C.teal);
   card(slide, 9.85, 1.15, 2.85, 1.55, "2. CV intelligence", "Extract skills, tools, industries, achievements, and years of experience.", C.gold);
   card(slide, 6.6, 3.15, 2.85, 1.55, "3. Fit scoring", "Rank every profile against weighted requirements and gaps.", C.coral);
@@ -389,7 +389,7 @@ function slide4() {
   const slide = pptx.addSlide();
   addBackground(slide, true);
   addLogo(slide, true);
-  addTitle(slide, "Product", "Recruiter dashboard for live candidate matching.", "GetJob makes the shortlist visible: ranked profiles, skill coverage, match scores, gaps, and next-step recommendations.", true);
+  addTitle(slide, "Product", "Recruiter dashboard for live candidate matching.", "Getjobz makes the shortlist visible: ranked profiles, skill coverage, match scores, gaps, and next-step recommendations.", true);
   slide.addImage({
     data: svgData("product-dashboard.svg"),
     x: 6.05,
@@ -449,7 +449,7 @@ function slide6() {
   const slide = pptx.addSlide();
   addBackground(slide);
   addLogo(slide);
-  addTitle(slide, "Customers", "Built for teams that hire often and move fast.", "Beachhead customers can adopt GetJob for high-volume roles where screening quality and recruiter time matter.");
+  addTitle(slide, "Customers", "Built for teams that hire often and move fast.", "Beachhead customers can adopt Getjobz for high-volume roles where screening quality and recruiter time matter.");
   card(slide, 6.6, 1.2, 2.9, 1.6, "Recruitment agencies", "Screen large applicant pools and send stronger shortlists to clients.", C.teal);
   card(slide, 9.8, 1.2, 2.9, 1.6, "SME hiring teams", "Add AI screening without buying a heavy enterprise HR suite.", C.gold);
   card(slide, 6.6, 3.2, 2.9, 1.6, "HR departments", "Standardize evaluation across roles, teams, and hiring managers.", C.coral);
@@ -466,7 +466,7 @@ function slide7() {
   const slide = pptx.addSlide();
   addBackground(slide, true);
   addLogo(slide, true);
-  addTitle(slide, "Business model", "Software plus agency-grade screening services.", "GetJob can sell recurring software access and done-with-you hiring support for teams that need immediate results.", true);
+  addTitle(slide, "Business model", "Software plus agency-grade screening services.", "Getjobz can sell recurring software access and done-with-you hiring support for teams that need immediate results.", true);
   card(slide, 0.85, 3.05, 2.85, 1.7, "Starter", "Low-cost monthly access for small teams running a few roles.", C.teal);
   card(slide, 3.98, 3.05, 2.85, 1.7, "Growth", "Team seats, shared pipelines, analytics, and shortlist exports.", C.gold);
   card(slide, 7.1, 3.05, 2.85, 1.7, "Agency service", "Per-role screening, ranking, and shortlist report delivery.", C.coral);
@@ -489,7 +489,7 @@ function slide8() {
   const slide = pptx.addSlide();
   addBackground(slide);
   addLogo(slide);
-  addTitle(slide, "Go-to-market", "Win with pilots that prove time saved.", "GetJob starts where the pain is visible: roles with high applicant volume and limited recruiter bandwidth.");
+  addTitle(slide, "Go-to-market", "Win with pilots that prove time saved.", "Getjobz starts where the pain is visible: roles with high applicant volume and limited recruiter bandwidth.");
   addBullets(slide, 0.92, 3.05, [
     "Offer two-week screening pilots for one active role.",
     "Target recruitment agencies, HR managers, startup founders, and operations teams.",
@@ -518,9 +518,9 @@ function slide9() {
   const slide = pptx.addSlide();
   addBackground(slide);
   addLogo(slide);
-  addTitle(slide, "Positioning", "A recruiting workflow product, not just a chatbot.", "GetJob combines structured scorecards, CV intelligence, ranked shortlists, and responsible AI controls.");
+  addTitle(slide, "Positioning", "A recruiting workflow product, not just a chatbot.", "Getjobz combines structured scorecards, CV intelligence, ranked shortlists, and responsible AI controls.");
   const rows = [
-    ["Capability", "Manual review", "ATS only", "Generic AI", "GetJob"],
+    ["Capability", "Manual review", "ATS only", "Generic AI", "Getjobz"],
     ["CV evidence extraction", "Slow", "Basic", "Prompted", "Structured"],
     ["Role-fit ranking", "Inconsistent", "Limited", "Manual setup", "Built in"],
     ["Shortlist reports", "Manual", "Limited", "Unstructured", "Ready"],
@@ -572,7 +572,7 @@ function slide10() {
   const slide = pptx.addSlide();
   addBackground(slide);
   addLogo(slide);
-  addTitle(slide, "Responsible AI", "Explainable ranking with human control.", "GetJob is designed to support better recruiter decisions, not replace them.");
+  addTitle(slide, "Responsible AI", "Explainable ranking with human control.", "Getjobz is designed to support better recruiter decisions, not replace them.");
   slide.addImage({ data: svgData("compliance-visual.svg"), x: 7.05, y: 1.22, w: 5.0, h: 3.45 });
   addBullets(slide, 0.92, 3.28, [
     "Scores show matched skills, missing criteria, and evidence notes.",
@@ -610,12 +610,12 @@ function slide12() {
   const slide = pptx.addSlide();
   addBackground(slide);
   addLogo(slide);
-  addTitle(slide, "Decision team", "Human experts own the final shortlist decision.", "GetJob uses AI to rank candidates, then a responsible review team validates evidence, fit, and client context before final recommendations are sent.");
+  addTitle(slide, "Decision team", "Human experts own the final shortlist decision.", "Getjobz uses AI to rank candidates, then a responsible review team validates evidence, fit, and client context before final recommendations are sent.");
   personCard(slide, 0.85, 3.0, 2.8, 1.72, "AO", "Adaora Okeke", "Head of Talent Decisions", "Approves final shortlists and calibrates role-fit recommendations with hiring managers.", C.teal);
   personCard(slide, 3.92, 3.0, 2.8, 1.72, "MT", "Michael Thompson", "People Operations Lead", "Reviews experience depth, candidate readiness, compensation fit, and interview process quality.", C.ink);
   personCard(slide, 6.99, 3.0, 2.8, 1.72, "NB", "Nadia Bello", "AI Screening Analyst", "Audits match scores, verifies extracted skills, and prepares interview focus notes.", C.coral);
   personCard(slide, 10.06, 3.0, 2.45, 1.72, "DE", "David Evans", "Client Hiring Partner", "Aligns recommendations with business goals, culture signals, and hiring timelines.", C.gold);
-  slide.addText("Decision rule: AI recommends, the GetJob team reviews, and the hiring manager makes the final employment decision.", {
+  slide.addText("Decision rule: AI recommends, the Getjobz team reviews, and the hiring manager makes the final employment decision.", {
     x: 1.1,
     y: 5.55,
     w: 11.0,
@@ -633,9 +633,9 @@ function slide13() {
   const slide = pptx.addSlide();
   addBackground(slide);
   addLogo(slide);
-  addTitle(slide, "The ask", "Partner with GetJob to make shortlisting faster and smarter.", "We are looking for pilot customers, HR partners, and early investors who want a practical AI layer for recruiting teams.");
+  addTitle(slide, "The ask", "Partner with Getjobz to make shortlisting faster and smarter.", "We are looking for pilot customers, HR partners, and early investors who want a practical AI layer for recruiting teams.");
   addBullets(slide, 0.94, 3.1, [
-    "Pilot GetJob on one active hiring role.",
+    "Pilot Getjobz on one active hiring role.",
     "Share hiring manager feedback on shortlist quality.",
     "Partner on ATS integrations and recruiter workflows.",
     "Support the build-out of a trusted AI recruitment agency."
@@ -649,7 +649,7 @@ function slide13() {
     fill: { color: C.ink },
     line: { color: C.ink }
   });
-  slide.addText("GetJob", {
+  slide.addText("Getjobz", {
     x: 7.55,
     y: 3.08,
     w: 4.0,
@@ -671,7 +671,7 @@ function slide13() {
     align: "center",
     margin: 0
   });
-  slide.addText("Contact form available on the GetJob website: share role details, hiring volume, and shortlist timeline.", {
+  slide.addText("Contact form available on the Getjobz website: share role details, hiring volume, and shortlist timeline.", {
     x: 7.55,
     y: 4.22,
     w: 4.0,

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
-  <title id="title">GetJob product dashboard</title>
+  <title id="title">Getjobz product dashboard</title>
   <desc id="desc">A recruiter dashboard with job requirements, candidate rankings, skill coverage, and shortlist actions.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
@@ -20,7 +20,7 @@
   <rect x="70" y="770" width="250" height="60" fill="#0b514e"/>
   <rect x="112" y="118" width="54" height="54" rx="12" fill="#ffffff"/>
   <text x="125" y="151" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0b514e">GJ</text>
-  <text x="182" y="150" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">GetJob</text>
+  <text x="182" y="150" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Getjobz</text>
   <rect x="112" y="226" width="156" height="42" rx="10" fill="#ffffff" opacity="0.16"/>
   <rect x="112" y="296" width="116" height="14" rx="7" fill="#ffffff" opacity="0.55"/>
   <rect x="112" y="338" width="148" height="14" rx="7" fill="#ffffff" opacity="0.55"/>

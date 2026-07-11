@@ -334,14 +334,14 @@ function handleContactSubmit(event) {
   };
 
   try {
-    const savedEnquiries = JSON.parse(localStorage.getItem("getjobEnquiries") || "[]");
+    const savedEnquiries = JSON.parse(localStorage.getItem("getjobzEnquiries") || "[]");
     savedEnquiries.push(enquiry);
-    localStorage.setItem("getjobEnquiries", JSON.stringify(savedEnquiries));
+    localStorage.setItem("getjobzEnquiries", JSON.stringify(savedEnquiries));
   } catch (error) {
-    console.warn("Could not save GetJob enquiry locally.", error);
+    console.warn("Could not save Getjobz enquiry locally.", error);
   }
 
-  const subject = encodeURIComponent(`GetJob enquiry from ${enquiry.company}`);
+  const subject = encodeURIComponent(`Getjobz enquiry from ${enquiry.company}`);
   const body = encodeURIComponent(
     [
       `Name: ${enquiry.name}`,
@@ -355,7 +355,7 @@ function handleContactSubmit(event) {
   );
 
   refs.contactStatus.textContent = "Opening an email draft now.";
-  window.location.href = `mailto:hello@getjob.ai?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:hello@getjobz.ai?subject=${subject}&body=${body}`;
   refs.contactForm.reset();
 }
 
